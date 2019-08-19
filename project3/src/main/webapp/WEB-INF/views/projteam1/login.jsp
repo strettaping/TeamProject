@@ -11,7 +11,7 @@
 <script type="text/javascript">
 	$(function(){
 		$('#signInBtn').click(function(){
-			location.href = "/team1/signin"
+			location.href = '<c:url value="/team1/signin"></c:url>'; 
 		});
 	});
 </script>

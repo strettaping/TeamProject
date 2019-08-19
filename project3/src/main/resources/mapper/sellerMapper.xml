@@ -23,8 +23,8 @@
 		where SellID = #{sellID}
 	</update>
 	
-	<delete id="deleteSeller">
-		delete from seller
-		where SellID = #{sellID}
+	<delete id="deleteBySID">
+		delete * from seller
+		where SID = #{sID}
 	</delete>
 </mapper>

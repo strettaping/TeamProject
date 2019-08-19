@@ -14,7 +14,7 @@
 	</select>
 	
 	<insert id="insertBuyer">
-		insert into buyer(BuyID, BuyPW, BuyName, BuyPN, BuyAdd1, BuyAdd2)
+		insert into buyer(BuyID, BuyPw, BuyName, BuyPN, BuyAdd1, BuyAdd2)
 		values(#{buyID}, #{buyPw}, #{buyName}, #{buyPN}, #{buyAdd1}, #{buyAdd2})
 	</insert>
 	

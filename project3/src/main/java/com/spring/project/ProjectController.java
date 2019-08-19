@@ -54,6 +54,7 @@ public class ProjectController {
 		return "/projteam1/sellerSignIn";
 	}
 	
+	
 	@RequestMapping(value = "/sellersignin", method = RequestMethod.POST)
 	public String sellerSignInPost(SellerVO svo, RedirectAttributes reAttr) throws Exception {
 		
@@ -62,29 +63,27 @@ public class ProjectController {
 		return "redirect:/team1/";
 	}
 	
+	
 	@RequestMapping(value = "/buyersignin", method = RequestMethod.GET)
-	public void buyerSignIn(BuyerVO bvo, Model model) {
-		
+	public String buyerSignIn(BuyerVO bvo, Model model) {
+		return "/projteam1/buyerSignIn";
 	}
 	
+	
 	@RequestMapping(value = "/buyersignin", method = RequestMethod.POST)
-	public String buyerSignInPost(BuyerVO bvo) {
+	public String buyerSignInPost(BuyerVO bvo, RedirectAttributes reAttr) {
 		LOGGER.info(bvo.toString());
 		
 		bsvc.write(bvo);
-		return "/projteam1/buyerSignInCheck";
+		reAttr.addFlashAttribute("result", "Success");
+		return "redirect:/team1/";
 	}
-	
-	// 정보 넘어가나 확인용
-	@RequestMapping(value="/buyerSignInCheck")
-	public void buyerSignInCheck(@RequestParam("Bid") String Bid, BuyerVO bvo) {
-		bsvc.read(Bid);
-	}
-	
 	
 	
 	@RequestMapping(value = "/{category}")
 	public String categoryList(@PathVariable("category") String category) {
+		
+		
 		return "/projteam1/category";
 	}
 	

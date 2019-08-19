@@ -8,11 +8,11 @@
 <script type="text/javascript">
 	$(function(){
 		$('#seller').click(function(){
-			location.href='<c:url value="/team1/sellersingin"></c:url>'
+			location.href='<c:url value="/team1/sellersignin"></c:url>'
 		});
 		
 		$('#buyer').click(function(){
-			location.href='<c:url value="/team1/buyersignin"></c:url>'
+			self.location='<c:url value="/team1/buyersignin"></c:url>';
 		});
 	});
 </script>
