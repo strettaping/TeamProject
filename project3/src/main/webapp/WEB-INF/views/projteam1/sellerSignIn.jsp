@@ -7,6 +7,15 @@
 <head>
 <meta charset="UTF-8">
 <title>sellSignIn.jsp</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#submitBtn').click(function(){
+			document.frm.method = "post";
+			$(this).submit();			
+		});
+	});
+</script>
 </head>
 <body>
 	<form name="frm" method="post">

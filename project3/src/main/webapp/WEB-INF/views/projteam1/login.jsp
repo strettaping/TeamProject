@@ -24,8 +24,8 @@
 			PW : <input type="text" name="pw" id="pw" />
 		</div>		
 		<div>
-			<button id="loginBtn", class="btn btn-primary">로그인</button>
-			<button id="signInBtn", class="btn btn-success">회원가입</button>
+			<button id="loginBtn" class="btn btn-primary">로그인</button>
+			<button id="signInBtn" class="btn btn-success">회원가입</button>
 		</div>
 		
 		

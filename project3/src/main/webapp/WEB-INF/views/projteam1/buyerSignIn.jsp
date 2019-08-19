@@ -7,29 +7,39 @@
 <head>
 <meta charset="UTF-8">
 <title>buyerSignIn.jsp</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#submitBtn').click(function(){
+			document.frm.method = "post";
+			$(this).submit();
+			location.href = "<c:url value='buyerSignInCheck'></c:url>"
+		});
+	});
+</script>
 </head>
-<body>
+<body>	
 	<form name="frm" method="post">
 		<div id="container">
 			<div id="idDiv">
-				ID : <input type="text" name="id" id="id" /> <button>중복확인</button><br />
+				ID : <input type="text" name="Bid" id="Bid" /> <button>중복확인</button><br />
 			</div>
 			
 			<div id="pwDiv">
-				PW : <input type="text" name="pw" id="pw" placeholder="영어 숫자 조합으로 8자 이상" /><br />
+				PW : <input type="text" name="Bpw" id="Bpw" placeholder="영어 숫자 조합으로 8자 이상" /><br />
 			</div>
 			
 			<div id="nameDiv">
-				이름 : <input type="text" name="name" id="name" /><br />
+				이름 : <input type="text" name="Bname" id="Bname" /><br />
 			</div>
 			
 			<div id="pNumDiv">
-				전화번호 : <input type="text" name="pNum" id="pNum" />
+				전화번호 : <input type="text" name="BpNum" id="BpNum" />
 			</div>
 			
 			<div id="AddDiv">
-				주소 : <input type="text" name="add1" id="add1" placeholder="시/구/동"/> <br />
-				나머지 주소 : <input type="text" name="add2" id="add2" />
+				주소 : <input type="text" name="Badd1" id="Badd1" placeholder="시/구/동"/> <br />
+				나머지 주소 : <input type="text" name="Badd2" id="Badd2" />
 			</div>
 			
 			<button id="submitBtn">등록</button>
