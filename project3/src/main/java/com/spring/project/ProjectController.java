@@ -27,7 +27,7 @@ public class ProjectController {
 	@Inject
 	BuyerSvc bsvc;
 	SellerSvc ssvc;
-	//SellerSvc도 인젝트해야됨.
+	
 	
 	
 	@RequestMapping(value="")
@@ -79,13 +79,13 @@ public class ProjectController {
 		return "redirect:/team1/";
 	}
 	
-	
+	/*
 	@RequestMapping(value = "/{category}")
 	public String categoryList(@PathVariable("category") String category) {
 		
 		
 		return "/projteam1/category";
 	}
-	
+	*/
 	
 }
