@@ -10,6 +10,7 @@
 	
 	<select id="selectSellerList" resultType="SellerVO">
 		select * from seller
+		where Category = #{category}
 	</select>
 	
 	<insert id="insertSeller">
@@ -24,7 +25,7 @@
 	</update>
 	
 	<delete id="deleteBySID">
-		delete * from seller
+		delete from seller
 		where SID = #{sID}
 	</delete>
 </mapper>

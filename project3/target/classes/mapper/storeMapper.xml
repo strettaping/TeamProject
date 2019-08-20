@@ -19,7 +19,7 @@
 	</insert>
 	
 	<delete id="deleteBySID">
-		delete * from STORE
+		delete from STORE
 		where SID = #{sID}
 	</delete>
 	
