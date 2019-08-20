@@ -22,9 +22,9 @@ public class StoreDAOImple implements StoreDAO {
 	}
 
 	@Override
-	public List<StoreVO> listSellID(String sellID) {
+	public List<StoreVO> listsNameAdd(String sellID, String address) {
 		// TODO Auto-generated method stub
-		return ss.selectList("selectOneSeller", sellID);
+		return ss.selectList("selectBySNameAndAddress", sellID);
 	}
 
 	@Override

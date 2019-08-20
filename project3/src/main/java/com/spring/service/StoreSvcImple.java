@@ -22,9 +22,9 @@ public class StoreSvcImple implements StoreSvc{
 	}
 
 	@Override
-	public List<StoreVO> listSellID(String sellID) {
+	public List<StoreVO> listsNameAdd(String sellID, String address) {
 		// TODO Auto-generated method stub
-		return stdao.listSellID(sellID);
+		return stdao.listsNameAdd(sellID, address);
 	}
 
 	@Override
