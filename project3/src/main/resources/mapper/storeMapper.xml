@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.dao.Store">
+	<select id="selectByCategory" resultType="StoreVO">
+		select * from STORE
+		where Category = #{category}
+	</select>
+	
+	<select id="selectBySellID" resultType="StoreVO">
+		select * from STORE
+		where SellID = #{SellID}
+	</select>
+	
+	<insert id="insertBySellID">
+		insert into STORE (SName, SPNumber, Menu, Price, Address, SellID, Category)
+		values(#{sName}, #{sPNumber}, #{menu}, #{price}, #{address}, #{sellID}, #{category})		
+	</insert>
+	
+	<delete id="deleteBySID">
+		delete from STORE
+		where SID = #{sID}
+	</delete>
+	
+	<update id="updateBySID">
+		update STORE 
+		set SName = #{sName}, SPNumber = #{sPNumber}, Menu = #{menu}, Address = #{address}
+		where SID = #{sID}
+	</update>
+</mapper>
