@@ -5,40 +5,42 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Repository;
 
 import com.spring.vo.StoreVO;
 
+@Repository
 public class StoreDAOImple implements StoreDAO {
+	
 	@Inject
 	SqlSession ss;
 
 	@Override
-	public List<StoreVO> read(String category) {
+	public List<StoreVO> listCategory(String category) {
 		// TODO Auto-generated method stub
-		return ss.selectList("list", category);
+		return ss.selectList("selectByCategory", category);
 	}
 
 	@Override
-	public List<StoreVO> list(String sellID) {
+	public List<StoreVO> listSellID(String sellID) {
 		// TODO Auto-generated method stub
-		return null;
+		return ss.selectList("selectOneSeller", sellID);
 	}
 
 	@Override
-	public void insert(StoreVO svo) {
-		// TODO Auto-generated method stub
-
+	public void insert(StoreVO stvo) {
+		ss.insert("insertBySellID", stvo);
 	}
 
 	@Override
 	public void update(Integer sID) {
-		// TODO Auto-generated method stub
+		ss.update("updateSeller", sID);
 
 	}
 
 	@Override
 	public void delete(Integer sID) {
-		// TODO Auto-generated method stub
+		ss.delete("deleteBySID", sID);
 
 	}
 

@@ -9,7 +9,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Category : ${category }</h2> : 카테고리 넘어감 
+	<h2>Category : ${category }</h2>
 	
+	<c:forEach var="lc" items="${list }">
+		카테고리 : ${lc.category } <br />
+		가게명 : ${lc.sName } <br />
+		전화번호 : ${lc.sPNumber } <br />
+		주소 : ${lc.address }
+	</c:forEach>
 </body>
 </html>
