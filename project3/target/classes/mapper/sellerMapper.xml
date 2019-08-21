@@ -24,7 +24,7 @@
 		where SellID = #{sellID}
 	</update>
 	
-	<delete id="deleteBySID">
+	<delete id="deleteSID">
 		delete from seller
 		where SID = #{sID}
 	</delete>

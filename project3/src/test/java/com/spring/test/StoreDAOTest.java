@@ -26,13 +26,13 @@ public class StoreDAOTest {
 	public void InsertTest() {		
 		StoreVO stvo = new StoreVO();
 		
-		stvo.setAddress("서울시 마포구 아현동");
+		stvo.setAddress("고양시 일산서구 주엽동");
 		stvo.setCategory("OnePerson");
-		stvo.setMenu("중화만두");
-		stvo.setPrice(3000);
-		stvo.setSellID("Xae");
-		stvo.setsName("현무살법고수");
-		stvo.setsPNumber("111-2222-3333"); 
+		stvo.setMenu("김치찌개");
+		stvo.setPrice(5000);
+		stvo.setSellID("DooWon");
+		stvo.setsName("한식당");
+		stvo.setsPNumber("111-2222-5555"); 
 		stdao.insert(stvo);
 	}
 	

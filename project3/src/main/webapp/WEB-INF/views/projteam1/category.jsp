@@ -5,16 +5,30 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html>
 <head>
+<style type="text/css">
+	td{
+	width:300px;
+	height:200px;
+	border: 1px solid #444444;
+}
+</style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Category : ${category }</h2>
+	<h1 align=center>Category : ${category }</h1>
+	<table>
 	
-	<c:forEach var="lc" items="${list }">
-		가게명 : ${lc.sName } <br />
-		전화번호 : ${lc.sPNumber } <br />
-		주소 : ${lc.address }
-	</c:forEach>
+				<c:forEach var="lc" items="${list }">
+				<tr>
+					<td>
+					가게명 : ${lc.sName } <br />
+					전화번호 : ${lc.sPNumber } <br />
+					주소 : ${lc.address }<br />
+					</td>
+				</tr>
+				</c:forEach>
+
+	</table>
 </body>
 </html>

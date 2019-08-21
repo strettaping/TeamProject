@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.spring.dao.RequestDAO">
+ 
+ 	<select id="selectOneRequest" resultType="RequestVO">
+ 		select * from request
+ 		where buyId = #{buyId} and oRegdate = #{oRegdate}
+ 	</select>
+ 	
+ 	<select id="selectRequestList" resultType="RequestVO">
+ 		select * from request
+ 	</select>
+ 	
+ 	<insert id="insertRequest">
+ 		insert into request(menu, price, qty, paq, ocode, status, sellId, buyId)
+ 		values(#{menu}, #{price}, #{qty}, #{price} * #{qty}, #{ocode}, #{status}, #{sellId}, #{buyId}) 
+ 	</insert>
+ 	
+ 	<update id="updateRequest">
+ 		update request
+ 		set menu = #{menu}, price = #{price}, qty = #{qty}, ocode = #{ocode}, status = #{status})
+ 		where oId = #{oId}
+ 	</update>
+ 	
+ 	<delete id="deleteRequest">
+ 		delete from request
+ 		where oId = #{oId}
+ 	</delete>
+ </mapper>

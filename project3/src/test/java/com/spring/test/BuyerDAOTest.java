@@ -18,7 +18,9 @@ public class BuyerDAOTest {
 	private BuyerDAO bdao;
 	
 	/*
-	 * @Test public void writeTest() throws Exception{ BuyerVO bvo = new BuyerVO();
+	 * @Test 
+	 * public void writeTest() throws Exception{ 
+	 * BuyerVO bvo = new BuyerVO();
 	 * bvo.setBuyID("BTester"); bvo.setBuyPw("1q2w3e4r!"); bvo.setBuyName("구매자테스터");
 	 * bvo.setBuyPN("123-456-7890"); bvo.setBuyAdd1("서울시 종로구 관철동");
 	 * bvo.setBuyAdd2("솔데스크 802호");
