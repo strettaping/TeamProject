@@ -23,7 +23,7 @@ public class SellerDAOImple implements SellerDAO{
 
 	@Override
 	public SellerVO selectOne(String sellID) {
-		return ss.selectOne("selectOneSeller", sellID);
+		return ss.selectOne("selectOneBySellID", sellID);
 	}
 
 	@Override
@@ -33,12 +33,12 @@ public class SellerDAOImple implements SellerDAO{
 
 	@Override
 	public void updateSeller(SellerVO svo) {
-		ss.update("updateSeller", svo);
+		ss.update("updateBySellID", svo);
 	}
 
 	@Override
 	public void deleteSeller(String sellID) {
-		ss.delete("deleteSeller", sellID);
+		ss.delete("deleteBySellID", sellID);
 		
 	}
 
