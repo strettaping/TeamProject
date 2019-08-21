@@ -52,7 +52,7 @@ public class StoreDAOTest {
 	*/
 	
 	// 가게 이름과 주소를 통해 검색
-	
+	/*
 	@Test
 	public void searchTest() {
 		List<StoreVO> list = stdao.listsNameAdd("S.테스터", "서울시 종로구 관철동");
@@ -62,4 +62,5 @@ public class StoreDAOTest {
 			
 		}
 	}
+	*/
 }

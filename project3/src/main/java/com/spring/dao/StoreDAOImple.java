@@ -39,7 +39,7 @@ public class StoreDAOImple implements StoreDAO {
 
 	@Override
 	public void update(Integer sID) {
-		ss.update("updateSeller", sID);
+		ss.update("updateBySID", sID);
 
 	}
 

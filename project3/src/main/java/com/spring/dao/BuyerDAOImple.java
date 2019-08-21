@@ -24,7 +24,7 @@ public class BuyerDAOImple implements BuyerDAO{
 	@Override
 	public BuyerVO selectOne(String buyerID) {
 		
-		return ss.selectOne("selectOneBuyer", buyerID);
+		return ss.selectOne("selectOneByBuyID", buyerID);
 	}
 
 	@Override
@@ -35,13 +35,13 @@ public class BuyerDAOImple implements BuyerDAO{
 
 	@Override
 	public void updateBuyer(BuyerVO bvo) {
-		ss.update("updateBuyer", bvo);
+		ss.update("updateByBuyId", bvo);
 		
 	}
 
 	@Override
 	public void deleteBuyer(String buyerID) {
-		ss.delete("deleteBuyer", buyerID);
+		ss.delete("deleteByBuyID", buyerID);
 		
 	}
 	
