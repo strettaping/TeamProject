@@ -1,6 +1,8 @@
 package com.spring.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -22,9 +24,9 @@ public class StoreSvcImple implements StoreSvc{
 	}
 
 	@Override
-	public List<StoreVO> listsPNum(String sPNumber) {
-		// TODO Auto-generated method stub
-		return stdao.listsPNum(sPNumber);
+	public List<StoreVO> listsNameAdd(String sName, String address) {
+		// TODO Auto-generated method stub				
+		return stdao.listsNameAdd(sName, address);		
 	}
 
 	@Override
