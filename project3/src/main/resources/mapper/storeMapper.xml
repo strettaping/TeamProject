@@ -8,9 +8,9 @@
 		where Category = #{category}
 	</select>
 	
-	<select id="selectBySPNum" resultType="StoreVO">
+	<select id="selectBysNameAndAdd" resultType="StoreVO">
 		select * from STORE
-		where SPNumber = #{sPNumber}
+		where SName = #{sName} and Address = #{address}
 	</select>
 	
 	<insert id="insertBySellID">

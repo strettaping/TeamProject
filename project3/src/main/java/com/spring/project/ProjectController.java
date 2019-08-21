@@ -27,8 +27,8 @@ public class ProjectController {
 	@Inject
 	BuyerSvc bsvc;
 	SellerSvc ssvc;
-	StoreSvc stsvc;
-	//SellerSvc도 인젝트해야됨.
+
+	
 	
 	
 	@RequestMapping(value="")

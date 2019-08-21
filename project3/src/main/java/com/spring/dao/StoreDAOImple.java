@@ -1,6 +1,8 @@
 package com.spring.dao;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -22,9 +24,12 @@ public class StoreDAOImple implements StoreDAO {
 	}
 
 	@Override
-	public List<StoreVO> listsPNum(String sPNumber) {
+	public List<StoreVO> listsNameAdd(String sName, String address) {
 		// TODO Auto-generated method stub
-		return ss.selectList("selectBysNameAdd", sPNumber);
+		Map<String, String> storeMap = new HashMap<String, String>();
+		storeMap.put("sName", sName);
+		storeMap.put("address", address);
+		return ss.selectList("selectBysNameAndAdd", storeMap);
 	}
 
 	@Override
