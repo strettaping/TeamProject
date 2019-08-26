@@ -16,7 +16,7 @@ public class SellerDAOImple implements SellerDAO{
 	SqlSession ss;
 	
 	@Override
-	public void insertSeller(SellerVO svo) {
+	public void insertSeller(SellerVO svo) {		
 		ss.insert("insertSeller", svo);
 		
 	}

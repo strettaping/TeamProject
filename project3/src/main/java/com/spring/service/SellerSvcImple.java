@@ -14,9 +14,14 @@ public class SellerSvcImple implements SellerSvc {
 	
 	@Inject
 	SellerDAO sdao;
+	
+	public SellerSvcImple() {
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public void write(SellerVO svo) {
+		System.out.println("입력시작");
 		sdao.insertSeller(svo);
 
 	}
