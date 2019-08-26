@@ -26,6 +26,7 @@ public class ProjectController {
 	
 	@Inject
 	BuyerSvc bsvc;
+	@Inject
 	SellerSvc ssvc;
 
 	
@@ -58,9 +59,19 @@ public class ProjectController {
 	
 	@RequestMapping(value = "/sellersignin", method = RequestMethod.POST)
 	public String sellerSignInPost(SellerVO svo, RedirectAttributes reAttr) throws Exception {
+		/*
+		LOGGER.info(svo.toString());
+		LOGGER.info(svo.getSellID());
+		LOGGER.info(svo.getSellName());
+		LOGGER.info(svo.getSellPN());
+		LOGGER.info(svo.getSellPw());
+		LOGGER.info(svo.getSellAdd1());
+		LOGGER.info(svo.getSellAdd2());
+		LOGGER.info(svo.getSellRD());
+		*/
+		ssvc.write(svo);
 		
-		reAttr.addFlashAttribute("Result", "Success");
-		
+		reAttr.addFlashAttribute("Result", "Success");		
 		return "redirect:/team1/";
 	}
 	
